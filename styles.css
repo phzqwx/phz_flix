@@ -1,60 +1,80 @@
 body {
-    color: red;
-    background: blue;
-    margin: 0px;
-    font-family: "Chakra Petch", sans-serif;
-    margin-bottom: 100px;
+    font-family: Georgia, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f1ee;
 }
 
-header {
-    border-bottom: solid 2px rgb(42, 122, 228);
-    padding: 20px;
-    font-size: 32px;
-    color: rgb(42, 122, 228);
+.cabecalho {
+    background-color: #5c3a21;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    margin: 10px;
 }
 
-.chamada {
-    background: rgb(blue);
-    padding-bottom: 80px;
-    padding-top: 80px;
-    display: flex;
-    justify-content: center;
-}
-
-.chamada-texto {
-    margin-right: 5%;
-}
-
-h1 {
+.cabecalho h1 {
+    margin: 0;
     font-size: 40px;
 }
 
-p {
-    font-size: 20px;
+.cabecalho p {
+    margin-top: 10px;
 }
 
-.categoria-videos {
-    display: flex;
-    overflow-x: auto;
-    gap: 10px;
+.conteudo {
+    padding: 20px;
 }
 
-.categoria {
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-top: 50px;
+.imagem-cafe {
+    width: 120px;
+    height: auto;
+    margin-bottom: 20px;
 }
 
-.categoria-videos img {
-    opacity: 0.5;
-    height: 200px;
+h2 {
+    color: #5c3a21;
 }
 
-.categoria-videos img:hover {
-    opacity: 1.0;
-    border: 3px solid green;
+.autor {
+    color: #666;
 }
 
-.categoria h2 {
-    color: rgb(42, 122, 228);
+.botoes {
+    margin-top: 20px;
+}
+
+.botoes button {
+    padding: 10px 15px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    transition: 0.3s;
+}
+
+.btn-coracao {
+    background-color: #e63946;
+}
+
+.btn-coracao:hover {
+    background-color: #c1121f;
+}
+
+.btn-like {
+    background-color: #2a9d8f;
+}
+
+.btn-like:hover {
+    background-color: #21867a;
+}
+
+.btn-deslike {
+    background-color: #6c757d;
+}
+
+.btn-deslike:hover {
+    background-color: #495057;
 }
