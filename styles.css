@@ -1,62 +1,85 @@
+/* Configuração do fundo geral da página (sem tema de café) */
 body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9; /* Fundo neutro e limpo */
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4f1ea;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
 }
 
-.cabecalho {
-    background: #6f4e37;
-    color: white;
+/* Estrutura do Quadradinho Central */
+.container-principal {
+    background-color: #ffffff; /* Fundo branco do quadrado */
+    max-width: 500px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 12px; /* Bordas arredondadas */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra suave para dar destaque */
     text-align: center;
-    padding: 20px;
 }
 
-.conteudo {
-    max-width: 800px;
-    margin: 30px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,.2);
+/* Cabeçalho */
+.cabecalho h1 {
+    color: #333333;
+    margin-bottom: 5px;
 }
 
+.subtitulo {
+    color: #666666;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+/* Imagem ajustada para o tamanho do quadrado */
 .imagem-cafe {
     width: 100%;
-    border-radius: 10px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
 }
 
-.autor {
-    color: gray;
-    font-style: italic;
-}
-
-.botoes {
+/* Texto do Post */
+h2 {
+    color: #2c3e50;
     margin-top: 20px;
 }
 
+.autor {
+    font-style: italic;
+    color: #888888;
+    font-size: 13px;
+}
+
+.texto-post {
+    color: #4a4a4a;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+/* Área dos Botões */
+.botoes {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
 button {
-    padding: 10px 15px;
-    margin-right: 10px;
-    border: none;
-    border-radius: 5px;
+    padding: 10px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    background-color: #fdfdfd;
     cursor: pointer;
-}
-
-.btn-coracao {
-    background: #ff6b81;
-    color: white;
-}
-
-.btn-like {
-    background: #4CAF50;
-    color: white;
-}
-
-.btn-deslike {
-    background: #e74c3c;
-    color: white;
+    font-weight: 500;
+    transition: all 0.2s ease;
 }
 
 button:hover {
-    opacity: 0.9;
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
 }
