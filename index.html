@@ -3,37 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Café</title>
+    <title>Meu Café - Blog do Pyetro</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container-principal">
+    <main class="container-principal">
 
-        <div class="cabecalho">
+        <header class="cabecalho">
             <h1>Meu Café</h1>
-            <p class="subtitulo">Compartilhando aromas, sabores e histórias sobre café</p>
-        </div>
+            <p>Compartilhando aromas, sabores e histórias sobre café</p>
+        </header>
 
-        <div class="conteudo">
-            <img src="img/cafe.jpg" alt="Xícara de café" class="imagem-cafe">
+        <article class="conteudo">
+            
+            <img src="img/cafe.jpg" alt="Uma linda xícara de café sobre a mesa" class="imagem-cafe">
 
             <h2>Meu primeiro café</h2>
+            
             <p class="autor">Por: Pyetro Dehon Goll</p>
 
-            <p class="texto-post">
+            <p>
                 Bem-vindo ao meu blog sobre café! Aqui vou compartilhar dicas de preparo,
                 curiosidades sobre grãos, métodos de extração e experiências do universo cafeeiro.
             </p>
 
-            <div class="botoes">
-                <button class="btn-coracao">❤️ Favoritar</button>
-                <button class="btn-like">👍 Like</button>
-                <button class="btn-deslike">👎 Deslike</button>
-            </div>
-        </div>
+            <section class="botoes">
+                <button class="btn-coracao" aria-label="Favoritar este post">
+                    <span>❤️</span> Favoritar
+                </button>
+                <button class="btn-like" aria-label="Curtir este post">
+                    <span>👍</span> Like
+                </button>
+                <button class="btn-deslike" aria-label="Não curtir este post">
+                    <span>👎</span> Deslike
+                </button>
+            </section>
 
-    </div>
+        </article>
+
+    </main>
 
 </body>
 </html>
