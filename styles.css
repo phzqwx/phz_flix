@@ -1,85 +1,155 @@
-/* Configuração do fundo geral da página (sem tema de café) */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f6f9; /* Fundo neutro e limpo */
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS E RESETS
+   ========================================================================== */
+* {
     margin: 0;
-    padding: 40px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    padding: 0;
     box-sizing: border-box;
 }
 
-/* Estrutura do Quadradinho Central */
-.container-principal {
-    background-color: #ffffff; /* Fundo branco do quadrado */
-    max-width: 500px;
-    width: 100%;
-    padding: 30px;
-    border-radius: 12px; /* Bordas arredondadas */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra suave para dar destaque */
-    text-align: center;
-}
-
-/* Cabeçalho */
-.cabecalho h1 {
+body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #f4f6f9; /* Fundo limpo, neutro e sem distrações */
     color: #333333;
-    margin-bottom: 5px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
-.subtitulo {
-    color: #666666;
-    font-size: 14px;
-    margin-top: 0;
+/* ==========================================================================
+   2. O "QUADRADINHO" CENTRAL (CARD)
+   ========================================================================== */
+.container-principal {
+    background-color: #ffffff;
+    max-width: 550px;
+    width: 100%;
+    padding: 35px;
+    border-radius: 16px; /* Bordas arredondadas modernas */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Sombra suave de profundidade */
+    transition: transform 0.3s ease;
+}
+
+/* Efeito sutil quando passa o mouse no card (bom para portfólio) */
+.container-principal:hover {
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   3. CABEÇALHO DO BLOG
+   ========================================================================== */
+.cabecalho {
+    text-align: center;
     margin-bottom: 25px;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 20px;
 }
 
-/* Imagem ajustada para o tamanho do quadrado */
+.cabecalho h1 {
+    font-size: 2rem;
+    color: #1a1a1a;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.cabecalho p {
+    font-size: 0.95rem;
+    color: #666666;
+    margin-top: 6px;
+}
+
+/* ==========================================================================
+   4. CONTEÚDO DO POST
+   ========================================================================== */
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Imagem Responsiva */
 .imagem-cafe {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover;
+    height: 250px;
+    object-fit: cover; /* Recorta a imagem perfeitamente sem distorcer */
+    border-radius: 12px;
 }
 
-/* Texto do Post */
-h2 {
+.conteudo h2 {
+    font-size: 1.5rem;
     color: #2c3e50;
-    margin-top: 20px;
+    margin-top: 8px;
 }
 
 .autor {
-    font-style: italic;
+    font-size: 0.85rem;
     color: #888888;
-    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: -8px;
 }
 
-.texto-post {
-    color: #4a4a4a;
+.conteudo p:not(.autor) {
+    font-size: 1rem;
     line-height: 1.6;
-    font-size: 15px;
+    color: #4a4a4a;
 }
 
-/* Área dos Botões */
+/* ==========================================================================
+   5. BOTÕES DE INTERAÇÃO
+   ========================================================================== */
 .botoes {
-    margin-top: 25px;
     display: flex;
-    justify-content: center;
-    gap: 10px;
+    gap: 12px;
+    margin-top: 15px;
+    flex-wrap: wrap; /* Garante que os botões quebrem linha em telas muito pequenas */
 }
 
 button {
-    padding: 10px 16px;
-    border: 1px solid #e0e0e0;
-    border-radius: 20px;
-    background-color: #fdfdfd;
+    flex: 1; /* Faz os botões dividirem o espaço igualmente */
+    min-width: 100px;
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 30px; /* Estilo pílula moderno */
+    background-color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #4a5568;
     cursor: pointer;
-    font-weight: 500;
-    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: all 0.2s ease-in-out;
 }
 
+/* Efeitos de Hover nos Botões */
 button:hover {
-    background-color: #f0f0f0;
-    transform: translateY(-2px);
+    background-color: #f8fafc;
+    border-color: #cbd5e1;
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Cores específicas opcionais para os hovers (opcional, dá um toque premium) */
+.btn-coracao:hover {
+    color: #e53e3e;
+    border-color: #fed7d7;
+    background-color: #fff5f5;
+}
+
+.btn-like:hover {
+    color: #3182ce;
+    border-color: #ebf8ff;
+    background-color: #ebf8ff;
+}
+
+.btn-deslike:hover {
+    color: #718096;
+    border-color: #edf2f7;
+    background-color: #edf2f7;
 }
